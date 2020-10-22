@@ -1,36 +1,30 @@
 import filestream
 
-str isI >>true   
 
 clear
-Write &>  _ __ ___ _ __ ___ _ __  _ __ <&
+Write &>   _ __ ___ _ __ ___ _ __  _ __ <&
 newline
-Write &> | '__/ __| '__/ __| '_ \| '_ \<&
+Write &>  | '__/ __| '__/ __| '_ \| '_ \<&
 newline
-Write &> | | | (__| | | (__| |_) | |_) |<&
+Write &>  | | | (__| | | (__| |_) | |_) |<&
 newline
-Write &> |_|  \___|_|  \___| .__/| .__/<&
+Write &>  |_|  \___|_|  \___| .__/| .__/<&
 newline
-Write &>                   | |   | |<&   
+Write &>rc password profiler| |   | |<&   
 newline
-Write &>                   |_|   |_|<&    
+Write &>                   | _|   |_|<&    
 newline
 newline
 
-str icmd >>-i
 
-if(str(arg1==icmd)) !>str isI >>true
-Write &>Press enter to Start<&
-$readline
-num lineCount >>20
-str tr >>true
-#if(str(isI==tr)) !>compile_lines(27,40) &else ->Write &>Error, please run rC rc_rccp -i<& ->compile_lines(all)
+
 Write &>First Name --> <&
 str firstName >>$readline
 Write &>Last Name --> <&
 str lastName >>$readline
 Write &>Nickname --> <&
 str nickname >>$readline
+#Write &>
 str fileExtension >>.txt
 str filename >>firstName
 str(filename+lastName)
@@ -40,6 +34,15 @@ WriteToFile file:filename content:firstName
 WriteToFile file:filename content:lastName
 WriteToFile file:filename content:nickname
 
+#USE ONLY ONE VAR AND MODIFY IT ALONG THE WAY
+str _write >>firstName
+str _ >>_ 
+str(_write+_)
+str(_write+lastName)
+WriteToFile file:filename content:_write
+
+
+ 
 
 
 
