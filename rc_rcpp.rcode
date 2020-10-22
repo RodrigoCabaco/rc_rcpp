@@ -1,0 +1,51 @@
+import filestream
+
+str isI >>true   
+
+clear
+Write &>  _ __ ___ _ __ ___ _ __  _ __ <&
+newline
+Write &> | '__/ __| '__/ __| '_ \| '_ \<&
+newline
+Write &> | | | (__| | | (__| |_) | |_) |<&
+newline
+Write &> |_|  \___|_|  \___| .__/| .__/<&
+newline
+Write &>                   | |   | |<&   
+newline
+Write &>                   |_|   |_|<&    
+newline
+newline
+
+str icmd >>-i
+
+if(str(arg1==icmd)) !>str isI >>true
+Write &>Press enter to Start<&
+$readline
+num lineCount >>20
+str tr >>true
+#if(str(isI==tr)) !>compile_lines(27,40) &else ->Write &>Error, please run rC rc_rccp -i<& ->compile_lines(all)
+Write &>First Name --> <&
+str firstName >>$readline
+Write &>Last Name --> <&
+str lastName >>$readline
+Write &>Nickname --> <&
+str nickname >>$readline
+str fileExtension >>.txt
+str filename >>firstName
+str(filename+lastName)
+str(filename+fileExtension)
+CreateFile file:filename
+WriteToFile file:filename content:firstName
+WriteToFile file:filename content:lastName
+WriteToFile file:filename content:nickname
+
+
+
+
+
+
+
+
+
+
