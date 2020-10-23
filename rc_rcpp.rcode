@@ -48,7 +48,7 @@ color.reset
 newline
 #Write &>
 str fileExtension >>.txt
-str filename >> 
+str filename >>
 str(filename+firstName)
 str(filename+lastName)
 str(filename+fileExtension)
