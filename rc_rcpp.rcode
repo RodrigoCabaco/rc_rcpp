@@ -20,28 +20,28 @@ newline
 
 Write &>     First Name --> <&
 str firstName >>$readline
-Write &>First Name ==> <&
+Write &>First Name => <&
 color.green
 WriteStr &>firstName<&
 newline
 color.reset
 Write &>     Last Name --> <&
 str lastName >>$readline
-Write &>Last Name ==> <&
+Write &>Last Name => <&
 color.green
 WriteStr &>lastName<&
 color.reset
 newline
 Write &>     Nickname --> <&
 str nickname >>$readline
-Write &>Nickname ==> <&
+Write &>Nickname => <&
 color.green
 WriteStr &>nickname<&
 newline
 color.reset
 Write &>     Additional Word --> <&
 str additionalword >>$readline
-Write &>Additional Word ==> <&
+Write &>Additional Word => <&
 color.green
 WriteStr &>additionalword<&
 color.reset
@@ -67,19 +67,19 @@ WriteToFile file:filename content:_write
 WriteToFile file:filename content:additionalword
 str _write >> 
 str(_write+additionalword)
-for x in range %100 $>str _write >>$>str(_write+additionalword)$>Write &>Generating Password --> <&$>numToString(i>>x)$>str(_write+i)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+additionalword)$>Write &>Generating Password --> <&$>numToString(i>>x)$>str(_write+i)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
 str additionalplus0 >>
 str(additionalplus0+additionalword)
 str(additionalplus0+0)
-for x in range %100 $>str _write >>$>str(_write+additionalplus0)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+additionalplus0)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
 str _write >>
-for x in range %100 $>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
-for x in range %100 $>str _write >>$>str(_write+nickname)$>str(_write+0)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+nickname)$>str(_write+0)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
 
 
  
-for x in range %100 $>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+_)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
-for x in range %100 $>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+_)$>str(_write+0)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+_)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
+for x in range %100 $>sleep >>10$>str _write >>$>str(_write+nickname)$>Write &>Generating Password --> <&$>numToString(f>>x)$>str(_write+_)$>str(_write+0)$>str(_write+f)$>WriteStr &>_write<&$>newline$>WriteToFile file:filename content:_write
 
 
 
